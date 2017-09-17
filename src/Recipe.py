@@ -10,7 +10,8 @@ class Recipe(object):
         self.recipe_name = "" #what's in a name?
         self.synopsis = "" #prep time, cook time, bake temp, etc. also short note for easy ref if you want
         self.uses = 0 #track how many times a recipe has been used
-
+        self.source = "" #where did the recipe come from?
+        
 #these methods should interact with the database
     #do we need these to go somewhere else? do they make sense as part of this class?
     def add_recipe(self):
