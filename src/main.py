@@ -1,5 +1,5 @@
 #imports
-from Recipe import Recipe
+from .Recipe import Recipe
 
 
 if __name__ == "__main__":
