@@ -1,6 +1,6 @@
 #imports
 from .Recipe import Recipe
-import Utilities
+from .Utilities import Utilities
 
 
 if __name__ == "__main__":
