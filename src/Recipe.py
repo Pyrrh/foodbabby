@@ -15,8 +15,32 @@ class Recipe(object):
 
 #these methods should interact with the database
     #do we need these to go somewhere else? do they make sense as part of this class?
+
+#####Database is for future iteration. For now, let's read & write to JSON
     def add_recipe(self):
+        again = "y"
+        input("Please enter recipe name")
+        while again != "n":
+            input("""Please enter ingredient quantity, unit, and name. For example: 
+        '2 cups flour'""")
+            again = input("Are there more ingredinets? Y/N").lower()
+        input("Please enter all recipe directions")
+        input("Please enter any notes for this recipe. If there are none, just press Enter")
+        input("Please enter any recipe synopsis you would like to have. This may include"
+              " prep time, cook time, baking temperature, or more. If there is none, "
+              "just press Enter")
+        input("Please enter the recipe source. If you don't want to add one, just press Enter")
+        more_labels = "y"
+        while more_labels != "n":
+            input("Enter a label to tag this recipe with. If you don't want to add one, just press Enter")
+            more_labels = input("Is there another label to add? Y/N").lower()
         return
+
+    def get_ingredients(self):
+
+        return
+
+
 
     def edit_recipe(self):
         return

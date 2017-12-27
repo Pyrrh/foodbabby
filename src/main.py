@@ -29,6 +29,6 @@ if __name__ == "__main__":
     #refactor to have menu display during a single function call
 
     while isValid != True:
-        isValid = Utilities.validate(input())
+        isValid = Utilities.validate_selection(input())
 
 
