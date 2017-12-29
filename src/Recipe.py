@@ -19,8 +19,9 @@ class Recipe(object):
 #####Database is for future iteration. For now, let's read & write to JSON
     def add_recipe(self):
         again = "y"
-        input("Please enter recipe name")
+        self.recipe_name = input("Please enter recipe name")
         while again != "n":
+            #call add_ingredient method and add this line of input here
             input("""Please enter ingredient quantity, unit, and name. For example: 
         '2 cups flour'""")
             again = input("Are there more ingredients? Y/N").lower()
@@ -40,9 +41,8 @@ class Recipe(object):
 
         return
 
-
-
     def edit_recipe(self):
+        #maybe I just call add_recipe again and force-overwrite it????? probably a bad idea
         return
 
     def delete_recipe(self):
