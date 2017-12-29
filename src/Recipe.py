@@ -23,7 +23,7 @@ class Recipe(object):
         while again != "n":
             input("""Please enter ingredient quantity, unit, and name. For example: 
         '2 cups flour'""")
-            again = input("Are there more ingredinets? Y/N").lower()
+            again = input("Are there more ingredients? Y/N").lower()
         input("Please enter all recipe directions")
         input("Please enter any notes for this recipe. If there are none, just press Enter")
         input("Please enter any recipe synopsis you would like to have. This may include"
