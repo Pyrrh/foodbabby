@@ -22,3 +22,5 @@ class TestAddIngredient(unittest.TestCase):
 class TestAddRecipe(unittest.Testcase):
     def test_add_recipe(self):
         test_recipe = Recipe()
+
+        test_recipe.add_recipe()
