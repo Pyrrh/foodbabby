@@ -1,14 +1,9 @@
-
-
-if __name__ == '__main__' and __package__ is None:
-    from os import sys, path
-    sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
-
 #imports
 from src.Recipe import Recipe
 from src.Utilities import Utilities
 
 if __name__ == "__main__":
+    main_utils = Utilities()
     a_recipe = Recipe()
 
     isValid = False
@@ -28,7 +23,8 @@ if __name__ == "__main__":
     """)
     #refactor to have menu display during a single function call
 
-    while isValid != True:
-        isValid = Utilities.validate(input())
+    while not isValid:
+        isValid = Utilities.validate_selection(main_utils, input())
 
+    #do menu things!
 
