@@ -19,7 +19,7 @@ class TestAddIngredient(unittest.TestCase):
         self.assertEqual(test_recipe.ingredients, [(1, "cup", "flour"), (3, "Tbsp", "cinnamon")])
 
 
-class TestAddRecipe(unittest.Testcase):
+class TestAddRecipe(unittest.TestCase):
     def test_add_recipe(self):
         test_recipe = Recipe()
 

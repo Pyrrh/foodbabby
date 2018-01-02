@@ -10,47 +10,6 @@ class Recipe(object):
         self.source = ""  # where did the recipe come from?
         self.labels = []  # used in searching for recipes
 
-# these methods should interact with the database
-    # do we need these to go somewhere else? do they make sense as part of this class?
-
-#     Database is for future iteration. For now, let's read & write to JSON
-    def add_recipe(self):
-        again = "y"
-        self.recipe_name = input("Please enter recipe name")
-        while again != "n":
-
-            # get ingredient input, split it, store it
-            split_input = input("""Please enter ingredient quantity, unit, and name. For example: 
-        '2 cups flour'""").split(" ")
-            if len(split_input) == 3:
-                self.add_ingredient(split_input[0], split_input[1], split_input[2])
-
-            again = input("Are there more ingredients? Y/N").lower()
-        self.directions = input("Please enter all recipe directions")
-        self.notes = input("Please enter any notes for this recipe. If there are none, just press Enter")
-        self.synopsis = input("Please enter any recipe synopsis you would like to have. This may include"
-                              " prep time, cook time, baking temperature, or more. If there is none, "
-                              "just press Enter")
-        self.source = input("Please enter the recipe source. If you don't want to add one, just press Enter")
-        more_labels = "y"
-        while more_labels != "n":
-            self.labels.append(input("Enter a label to tag this recipe with. "
-                                     "If you don't want to add one, just press Enter"))
-            more_labels = input("Is there another label to add? Y/N").lower()
-        return
-
-    def edit_recipe(self):
-        return
-
-    def delete_recipe(self):
-        return
-
-    def display_recipe(self):
-        return
-
-    # we also will want a 'display all recipes' method but this belongs elsewhere
-    # same for searching for recipes
-
     def add_ingredient(self, qty, unit, name):
         self.ingredients.append((qty, unit, name))
         return
