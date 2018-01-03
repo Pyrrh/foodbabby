@@ -1,10 +1,10 @@
 #imports
-from src.Recipe import Recipe
+from src.Cookbook import Cookbook
 from src.Utilities import Utilities
 
 if __name__ == "__main__":
     main_utils = Utilities()
-    a_recipe = Recipe()
+    a_cookbook = Cookbook()
 
     isValid = False
 
@@ -21,10 +21,12 @@ if __name__ == "__main__":
     6. Save and Quit (SAVE NOT IMPLEMENTED, QUITTING IS EASY)
     
     """)
-    #refactor to have menu display during a single function call
+    # refactor to have menu display during a single function call
 
+    selection = input()
     while not isValid:
-        isValid = Utilities.validate_selection(main_utils, input())
+        isValid = Utilities.validate_selection(main_utils, selection)
 
-    #do menu things!
-
+    # do menu things!
+    if selection == 1:
+        a_cookbook.add_recipe()
