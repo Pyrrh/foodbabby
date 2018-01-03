@@ -2,6 +2,7 @@
 import unittest
 from src.Recipe import Recipe
 from src.Utilities import Utilities
+from src.Cookbook import Cookbook
 
 
 # modify this base test case
@@ -21,6 +22,6 @@ class TestAddIngredient(unittest.TestCase):
 
 class TestAddRecipe(unittest.TestCase):
     def test_add_recipe(self):
-        test_recipe = Recipe()
+        test_book = Cookbook()
 
-        test_recipe.add_recipe()
+        test_book.add_recipe()
