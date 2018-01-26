@@ -1,4 +1,4 @@
-#imports
+# imports
 from src.Cookbook import Cookbook
 from src.Utilities import Utilities
 
@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     selection = input()
     while not isValid:
-        isValid = Utilities.validate_selection(main_utils, selection)
+        isValid = Utilities.validate_selection(selection)
 
     # do menu things!
     if selection == 1:
