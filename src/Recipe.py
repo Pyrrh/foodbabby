@@ -13,3 +13,14 @@ class Recipe(object):
     def add_ingredient(self, qty, unit, name):
         self.ingredients.append((qty, unit, name))
         return
+
+    def display_recipe(self):
+        print(self.recipe_name + "\n")
+        print("Ingredients: \n")
+        for i in self.ingredients:
+            print(i + "\n")
+        print("Directions: \n" + self.directions + "\n")
+        print("Notes: \n" + self.notes + "\n")
+        if self.source:
+            print("Recipe obtained from " + self.source)
+        return

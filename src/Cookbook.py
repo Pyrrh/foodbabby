@@ -44,8 +44,13 @@ class Cookbook(object):
     def delete_recipe(self):
         return
 
-    def display_recipe(self):
+    def find_recipe_by_name(self, name):
         return
 
-        # we also will want a 'display all recipes' method
-        # same for searching for recipes
+    def find_recipe_by_label(self, label):
+        return
+
+    def display_cookbook(self):
+        for r in self.recipes:
+            r.display_recipe()
+        return
