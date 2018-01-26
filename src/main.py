@@ -30,3 +30,18 @@ if __name__ == "__main__":
     # do menu things!
     if selection == 1:
         a_cookbook.add_recipe()
+
+    if selection == 2:
+        print()
+
+    if selection == 3:
+        print()
+
+    if selection == 4:
+        print()
+
+    if selection == 5:
+        print()
+
+    if selection == 6:
+        print()
