@@ -24,4 +24,4 @@ class TestAddRecipe(unittest.TestCase):
     def test_add_recipe(self):
         test_book = Cookbook()
 
-        test_book.add_recipe()
+        add_recipe()
