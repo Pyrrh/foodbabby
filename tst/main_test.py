@@ -23,5 +23,9 @@ class TestAddIngredient(unittest.TestCase):
 class TestAddRecipe(unittest.TestCase):
     def test_add_recipe(self):
         test_book = Cookbook()
+        test_book.add_recipe()
 
-        add_recipe()
+        self.assertNotEqual(test_book.recipes[0].recipe_name, "")
+        # can assert more things here to ensure ingredient, directions, etc are not empty
+        # this test is bad and it should feel bad
+        # (tests should be automated and not take user input)

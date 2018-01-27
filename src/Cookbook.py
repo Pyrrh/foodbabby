@@ -33,3 +33,9 @@ class Cookbook(object):
         for r in self.recipes:
             r.display_recipe()
         return
+
+    def save_cookbook(self):
+        return
+
+    def load_cookbook(self):
+        return
