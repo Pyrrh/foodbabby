@@ -1,5 +1,5 @@
 from src.Recipe import Recipe
-from src.Utilities import Utilities
+# from src.Utilities import Utilities
 
 
 class Cookbook(object):
@@ -11,31 +11,10 @@ class Cookbook(object):
 
     #     Database is for future iteration. For now, let's read & write to JSON
 
-    @staticmethod  # it told me to. TODO: research this & learn what it's about in python vs c/java
-    def add_recipe():
+    def add_recipe(self):
         new_recipe = Recipe()
-        again = "y"
-        new_recipe.recipe_name = input("Please enter recipe name")
-        while again != "n":
-
-            # get ingredient input, split it, store it
-            split_input = input("""Please enter ingredient quantity, unit, and name. For example: 
-                '2 cups flour'""").split(" ")
-            if len(split_input) == 3:
-                new_recipe.add_ingredient(split_input[0], split_input[1], split_input[2])
-
-            again = input("Are there more ingredients? Y/N").lower()
-        new_recipe.directions = input("Please enter all recipe directions")
-        new_recipe.notes = input("Please enter any notes for this recipe. If there are none, just press Enter")
-        new_recipe.synopsis = input("Please enter any recipe synopsis you would like to have. This may include"
-                              " prep time, cook time, baking temperature, or more. If there is none, "
-                              "just press Enter")
-        new_recipe.source = input("Please enter the recipe source. If you don't want to add one, just press Enter")
-        more_labels = "y"
-        while more_labels != "n":
-            new_recipe.labels.append(input("Enter a label to tag this recipe with. "
-                                     "If you don't want to add one, just press Enter"))
-            more_labels = input("Is there another label to add? Y/N").lower()
+        new_recipe.get_recipe_content()
+        self.recipes.append(new_recipe)
         return
 
     def edit_recipe(self):
@@ -44,8 +23,13 @@ class Cookbook(object):
     def delete_recipe(self):
         return
 
-    def display_recipe(self):
+    def find_recipe_by_name(self, name):
         return
 
-        # we also will want a 'display all recipes' method
-        # same for searching for recipes
+    def find_recipe_by_label(self, label):
+        return
+
+    def display_cookbook(self):
+        for r in self.recipes:
+            r.display_recipe()
+        return
