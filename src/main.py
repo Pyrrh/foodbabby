@@ -48,7 +48,10 @@ if __name__ == "__main__":
     if selection == 6:
         print()
 
-    testJson = [a_cookbook]
+    testJson = {'recipes': []}
+    testJson['recipes'].append("")
+    # Need to parse apart a cookbook object into individual recipe parts& store as json
+    # i.e. 'recipe name': "NAME" 'ingredient': 'INGREDIENT QTY,UNIT,NAME' etc etc
 
     with open('testcookbook.txt', 'w') as out:
         json.dump(testJson, out)
