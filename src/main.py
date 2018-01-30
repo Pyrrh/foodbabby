@@ -1,12 +1,14 @@
 # imports
 from src.Cookbook import Cookbook
 from src.Utilities import Utilities
+import json
 
 if __name__ == "__main__":
     main_utils = Utilities()
     a_cookbook = Cookbook()
 
     isValid = False
+
 
 
     print("MAIN MENU\n\n")
@@ -29,7 +31,7 @@ if __name__ == "__main__":
 
     # do menu things!
     if selection == 1:
-        add_recipe()
+        a_cookbook.add_recipe()
 
     if selection == 2:
         print()
@@ -45,3 +47,8 @@ if __name__ == "__main__":
 
     if selection == 6:
         print()
+
+    testJson = [a_cookbook]
+
+    with open('testcookbook.txt', 'w') as out:
+        json.dump(testJson, out)
