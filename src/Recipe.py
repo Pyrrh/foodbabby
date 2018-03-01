@@ -51,3 +51,11 @@ class Recipe(object):
         if self.source:
             print("Recipe obtained from " + self.source)
         return
+
+    def recipe_to_dict(self):
+        recipe_dict = {'ingredients': [], 'directions': "", 'notes': "", 'recipe_name': "",
+                       'synopsis': "", 'uses': 0, 'source': "", 'labels': []}
+
+        for x in self.ingredients:
+            recipe_dict.keys()
+        return recipe_dict

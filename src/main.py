@@ -49,7 +49,7 @@ if __name__ == "__main__":
         print()
 
     testJson = {'recipes': []}
-    testJson['recipes'].append("")
+    testJson['recipes'].append("tesst")
     # Need to parse apart a cookbook object into individual recipe parts& store as json
     # i.e. 'recipe name': "NAME" 'ingredient': 'INGREDIENT QTY,UNIT,NAME' etc etc
 
