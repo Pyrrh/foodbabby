@@ -53,9 +53,8 @@ class Recipe(object):
         return
 
     def recipe_to_dict(self):
-        recipe_dict = {'ingredients': [], 'directions': "", 'notes': "", 'recipe_name': "",
-                       'synopsis': "", 'uses': 0, 'source': "", 'labels': []}
-
-        for x in self.ingredients:
-            recipe_dict.keys()
+        recipe_dict = dict([('ingredients', self.ingredients), ('directions', self.directions),
+                            ('notes', self.notes), ('recipe_name', self.recipe_name),
+                            ('synopsis', self.synopsis), ('uses', self.uses), ('source', self.source),
+                            ('labels', self.labels)])
         return recipe_dict

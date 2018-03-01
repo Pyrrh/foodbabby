@@ -1,5 +1,6 @@
 # imports
 from src.Cookbook import Cookbook
+from src.Recipe import Recipe
 from src.Utilities import Utilities
 import json
 
@@ -48,8 +49,9 @@ if __name__ == "__main__":
     if selection == 6:
         print()
 
+    testRecipe = Recipe()
     testJson = {'recipes': []}
-    testJson['recipes'].append("tesst")
+    testJson['recipes'].append(testRecipe.recipe_to_dict)
     # Need to parse apart a cookbook object into individual recipe parts& store as json
     # i.e. 'recipe name': "NAME" 'ingredient': 'INGREDIENT QTY,UNIT,NAME' etc etc
 
