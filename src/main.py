@@ -10,23 +10,27 @@ if __name__ == "__main__":
 
     selection = main_utils.print_main_menu()
 
-    while selection != 6:
+    #while selection != 6:  # this input is validated in print_main_menu()
         # do menu things!
-        if selection == 1:
-            a_cookbook.add_recipe()
-            selection = main_utils.again()
+    if selection == 1:
+        a_cookbook.add_recipe()
+        #selection = main_utils.again()
 
-        if selection == 2:
-            selection = main_utils.again()
+    if selection == 2:
+        #selection = main_utils.again()
+        print()
 
-        if selection == 3:
-            selection = main_utils.again()
+    if selection == 3:
+        #selection = main_utils.again()
+        print()
 
-        if selection == 4:
-            selection = main_utils.again()
+    if selection == 4:
+        #selection = main_utils.again()
+        print()
 
-        if selection == 5:
-            selection = main_utils.again()
+    if selection == 5:
+        #selection = main_utils.again()
+        print()
 
     if selection == 6:
         a_cookbook.save_cookbook()

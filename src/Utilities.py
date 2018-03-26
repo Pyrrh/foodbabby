@@ -14,11 +14,11 @@ class Utilities:
 
         is_valid = False
 
-        print("MAIN MENU\n\n")
+        print("\nMAIN MENU\n\n")
         print("Select an option: \n")
 
         print("""
-            1. Add a recipe
+            1. Add a recipe (NOT IMPLEMENTED)
             2. Find a recipe (NOT IMPLEMENTED)
             3. Display a recipe (NOT IMPLEMENTED)
             4. Delete a recipe (NOT IMPLEMENTED)
@@ -30,6 +30,7 @@ class Utilities:
         selection = input()
         while not is_valid:
             is_valid = Utilities.validate_selection(selection)
+            selection = input()
         return selection
 
     def again(self):
