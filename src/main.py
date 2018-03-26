@@ -4,7 +4,7 @@ from src.Utilities import Utilities
 
 if __name__ == "__main__":
     main_utils = Utilities()
-    a_cookbook = Cookbook()
+    a_cookbook = Cookbook()  # TODO: fill with existing cookbook (Load from file)
 
     isValid = False
 
@@ -19,7 +19,7 @@ if __name__ == "__main__":
     3. Display a recipe (NOT IMPLEMENTED, DEPENDS ON 2. ABOVE)
     4. Delete a recipe (NOT IMPLEMENTED, DEPENDS ON 2. ABOVE)
     5. Build a shopping list (NOT IMPLEMENTED)
-    6. Save and Quit (SAVE NOT IMPLEMENTED, QUITTING IS EASY)
+    6. Save and Quit (LOAD FROM FILE NOT IMPLEMENTED)
     
     """)
     # refactor to have menu display during a single function call

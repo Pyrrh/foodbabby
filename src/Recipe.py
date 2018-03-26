@@ -30,8 +30,8 @@ class Recipe(object):
         self.directions = input("\nPlease enter all recipe directions: ")
         self.notes = input("\nPlease enter any notes for this recipe. If there are none, just press Enter: \n")
         self.synopsis = input("\nPlease enter any recipe synopsis you would like to have. This may include"
-                                    " prep time, cook time, baking \ntemperature, or more. If there is none, "
-                                    "just press Enter: \n")
+                              " prep time, cook time, baking \ntemperature, or more. If there is none, "
+                              "just press Enter: \n")
         self.source = input(
             "\nPlease enter the recipe source. If you don't want to add one, just press Enter: \n")
         more_labels = "y"
