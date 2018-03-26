@@ -31,3 +31,7 @@ class Utilities:
         while not is_valid:
             is_valid = Utilities.validate_selection(selection)
         return selection
+
+    def again(self):
+        print("Okay, what's next?\n")
+        return Utilities.print_main_menu(self)
