@@ -6,27 +6,10 @@ if __name__ == "__main__":
     main_utils = Utilities()
     a_cookbook = Cookbook()  # TODO: fill with existing cookbook (Load from file)
 
-    isValid = False
-
 # TODO: "Select a cookbook to load" prompt
 
-    print("MAIN MENU\n\n")
-    print("Select an option: \n")
+    selection = main_utils.print_main_menu()
 
-    print("""
-    1. Add a recipe (NOT IMPLEMENTED)
-    2. Find a recipe (NOT IMPLEMENTED)
-    3. Display a recipe (NOT IMPLEMENTED, DEPENDS ON 2. ABOVE)
-    4. Delete a recipe (NOT IMPLEMENTED, DEPENDS ON 2. ABOVE)
-    5. Build a shopping list (NOT IMPLEMENTED)
-    6. Save and Quit (LOAD FROM FILE NOT IMPLEMENTED)
-    
-    """)
-    # refactor to have menu display during a single function call
-
-    selection = input()
-    while not isValid:
-        isValid = Utilities.validate_selection(selection)
 
     # do menu things!
     if selection == 1:
