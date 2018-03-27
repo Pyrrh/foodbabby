@@ -45,7 +45,7 @@ class Recipe(object):
         print(self.recipe_name + "\n")
         print("Ingredients: \n")
         for i in self.ingredients:
-            print(i + "\n")
+            print(i[0] + " " + i[1] + " " + i[2] + "\n")
         print("Directions: \n" + self.directions + "\n")
         print("Notes: \n" + self.notes + "\n")
         if self.source:
