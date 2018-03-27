@@ -4,8 +4,10 @@ from src.Utilities import Utilities
 
 if __name__ == "__main__":
     main_utils = Utilities()
-    main_utils.ask_load_from_file()
+    load = main_utils.ask_load_from_file()
     a_cookbook = Cookbook()  # TODO: fill with existing cookbook (Load from file)
+    if load == "y":
+        Cookbook.load_cookbook(a_cookbook)
 
 # TODO: "Select a cookbook to load" prompt
 
