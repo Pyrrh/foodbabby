@@ -44,4 +44,8 @@ class Cookbook(object):
         return
 
     def load_cookbook(self):
+        with open(input("Please enter filename" + ".txt"), 'r') as read_file:
+            cookbook_content = json.load(read_file)
+
+        self.recipes = cookbook_content
         return

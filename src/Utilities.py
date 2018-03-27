@@ -2,7 +2,7 @@
 class Utilities:
 
     @staticmethod
-    def validate_selection(num):
+    def validate_menu_selection(num):
 
         if num.isalpha() or int(num) < 1 or int(num) > 6:
             print("""Invalid option. Please choose a number (1-6) from the menu: 
@@ -36,7 +36,7 @@ class Utilities:
 
         selection = input()
         while not is_valid:
-            is_valid = Utilities.validate_selection(selection)
+            is_valid = Utilities.validate_menu_selection(selection)
             if not is_valid:
                 selection = input()
         return selection
@@ -45,10 +45,17 @@ class Utilities:
         print("Okay, what's next?\n")
         return Utilities.print_main_menu(self)
 
-    def recipe_to_dict(self,cookbook):
+    def recipe_to_dict(self, cookbook):
         cookbook_dict = {'recipes': []}
 
         # iterate and add each recipe to the dictionary
         for r in cookbook.recipes:
             cookbook_dict['recipes'].append(r.recipe_to_dict())
         return cookbook_dict
+
+    def ask_load_from_file(self):
+        is_valid = False
+        response = input("Do you wish to load a cookbook? y/n")
+
+        # TODO: Input needs validation!!!!!!!!
+        return response
