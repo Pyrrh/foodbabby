@@ -6,10 +6,8 @@ import json
 class Cookbook(object):
     def __init__(self):
         self.recipes = []
-        self.name = ""  # define name of cookbook; TODO: allow load from a list of existing books
-
-        # these methods should interact with the database
-        # do we need these to go somewhere else? do they make sense as part of this class?
+        self.name = input("Please name your cookbook: ")
+        # define name of cookbook; TODO: allow load from a list of existing books
 
     #     Database is for future iteration. For now, let's read & write to JSON
 
