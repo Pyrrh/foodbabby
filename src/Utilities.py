@@ -44,3 +44,11 @@ class Utilities:
     def again(self):
         print("Okay, what's next?\n")
         return Utilities.print_main_menu(self)
+
+    def recipe_to_dict(self,cookbook):
+        cookbook_dict = {'recipes': []}
+
+        # iterate and add each recipe to the dictionary
+        for r in cookbook.recipes:
+            cookbook_dict['recipes'].append(r.recipe_to_dict())
+        return cookbook_dict

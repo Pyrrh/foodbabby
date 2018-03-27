@@ -20,6 +20,7 @@ if __name__ == "__main__":
             selection = main_utils.again()
 
         if selection == "3":
+            a_cookbook.display_cookbook()
             selection = main_utils.again()
 
         if selection == "4":
@@ -28,5 +29,6 @@ if __name__ == "__main__":
         if selection == "5":
             selection = main_utils.again()
 
+# separated because it doesn't need to be another conditional branch
     if selection == "6":
         a_cookbook.save_cookbook()

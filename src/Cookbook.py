@@ -1,12 +1,13 @@
 from src.Recipe import Recipe
 import json
-# from src.Utilities import Utilities
+from src.Utilities import Utilities
 
 
 class Cookbook(object):
     def __init__(self):
         self.recipes = []
         self.name = input("Please name your cookbook: ")
+        self.utilities = Utilities()
         # define name of cookbook; TODO: allow load from a list of existing books
 
     #     Database is for future iteration. For now, let's read & write to JSON
@@ -36,11 +37,7 @@ class Cookbook(object):
 
     def save_cookbook(self):
         # TODO: add saving a 'backup' copy of cookbook as default behavior
-        cookbook_dict = {'recipes': []}
-
-        # iterate and add each recipe to the dictionary
-        for r in self.recipes:
-            cookbook_dict['recipes'].append(r.recipe_to_dict())
+        cookbook_dict = Utilities.recipe_to_dict(self.utilities, self)
 
         with open(self.name + '.txt', 'w') as out:
             json.dump(cookbook_dict, out)
