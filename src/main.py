@@ -1,4 +1,6 @@
 # imports
+from signal import pause
+
 from src.Cookbook import Cookbook
 from src.Utilities import Utilities
 
@@ -24,6 +26,7 @@ if __name__ == "__main__":
 
         if selection == "3":
             a_cookbook.display_cookbook()
+            main_utils.pause()
             selection = main_utils.again()
 
         if selection == "4":
