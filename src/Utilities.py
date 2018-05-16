@@ -25,9 +25,9 @@ class Utilities:
         print("Select an option: \n")
 
         print("""
-            1. Add a recipe (NOT IMPLEMENTED)
+            1. Add a recipe
             2. Find a recipe (NOT IMPLEMENTED)
-            3. Display a recipe (NOT IMPLEMENTED)
+            3. Display a recipe
             4. Delete a recipe (NOT IMPLEMENTED)
             5. Build a shopping list (NOT IMPLEMENTED)
             6. Save and Quit (LOAD FROM FILE NOT IMPLEMENTED)
