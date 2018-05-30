@@ -56,7 +56,7 @@ class Utilities:
     def ask_load_from_file(self):
         is_valid = False
         response = input("Do you wish to load a cookbook? y/n")
-        if Utilities.validate_yes_no(response):
+        if Utilities.validate_yes_no(self, response):
         # maybe this is circular and bad, idk my bff jill
         # bugs? gotta fix'em all
             return response
@@ -64,8 +64,8 @@ class Utilities:
     def pause(self):
         pause = input("Press <ENTER> to continue")
 
-    def validate_yes_no(self, input):
+    def validate_yes_no(self, response):
         valid = False
-        if input.tolower() == "n" or input.tolower() == "y":
+        if response.lower() == "n" or response.lower() == "y":
             valid = True
         return valid
