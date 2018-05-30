@@ -37,7 +37,7 @@ class Cookbook(object):
 
     def save_cookbook(self):
         # TODO: add saving a 'backup' copy of cookbook as default behavior
-        cookbook_dict = Utilities.recipe_to_dict(self.utilities, self)
+        cookbook_dict = Utilities.recipe_to_dict(self)
 
         with open(self.name + '.txt', 'w') as out:
             json.dump(cookbook_dict, out)

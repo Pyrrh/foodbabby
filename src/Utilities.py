@@ -45,7 +45,8 @@ class Utilities:
         print("Okay, what's next?\n")
         return Utilities.print_main_menu(self)
 
-    def recipe_to_dict(self, cookbook):
+    @staticmethod
+    def recipe_to_dict(cookbook):
         cookbook_dict = {'recipes': []}
 
         # iterate and add each recipe to the dictionary
@@ -54,7 +55,7 @@ class Utilities:
         return cookbook_dict
 
     def ask_load_from_file(self):
-        is_valid = False
+        # is_valid = False
         response = input("Do you wish to load a cookbook? y/n")
         if Utilities.validate_yes_no(self, response):
         # maybe this is circular and bad, idk my bff jill
