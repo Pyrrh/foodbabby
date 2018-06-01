@@ -28,7 +28,7 @@ if __name__ == "__main__":
             a_cookbook.display_cookbook()
             main_utils.pause()
             selection = main_utils.again()
-        #currently has a bug where after pause 1 enter does not display again text & two errors program to exit. 
+        #currently has a bug where after pause 1 enter does not display again text & two errors program to exit.
 
         if selection == "4":
             selection = main_utils.again()
