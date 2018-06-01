@@ -1,11 +1,11 @@
 class Recipe(object):
 
-    # class constructor. defaults to all empty values. May need to update the default values of ingrediends & labels
-    def __init__(self, directions="", ingredients=[], labels=[], notes="", recipe_name="",
+    # class constructor. defaults to all empty values. May need to update the default values of ingredients & labels
+    def __init__(self, directions="", ingredients = "", labels = "", notes="", recipe_name="",
                  source="", synopsis="", uses=0):
         self.directions = directions  # how to make this food
-        self.ingredients = ingredients  # need to store lots of qty & unit & ingred per recipe. will be ordered triple
-        self.labels = labels  # used in searching for recipes
+        self.ingredients = []  # need to store lots of qty & unit & ingred per recipe. will be ordered triple
+        self.labels = []  # used in searching for recipes
         self.notes = notes  # personal annotations re: this recipe
         self.recipe_name = recipe_name  # what's in a name?
         self.source = source  # where did the recipe come from?
